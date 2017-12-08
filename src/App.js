@@ -3,6 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 import { connect } from 'react-redux'
 import test from './features/test/'
+import MessageForm from './components/MessageForm';
+
+// helper functions
 
 class App extends Component {
 
@@ -12,26 +15,48 @@ class App extends Component {
     testTriggered()
   }
 
+  changeMessage = (event) => {
+    const { messageChanged } = this.props
+    const message = event.target.value
+    messageChanged(message)
+  }
+
   render() {
+    // console.log(this.props)
+    console.log(changeMessage)
+    const { message, changeMessage } = this.props
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
+        <MessageForm messageChange={this.changeMessage}/>
+        <p>{message}</p>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
       </div>
-    );
+    )
   }
+
 }
 
-function mapStateToProps() { }
-function mapDispatchToProps(dispatch) {
+
+
+const mapStateToProps = (state) => {
+  return {
+    message: test.selectors.showMessage(state)
+  }
+}
+const mapDispatchToProps = (dispatch) => {
   return {
     testTriggered: () => {
       dispatch(test.actions.testAction('KEVVIIIN'))
+    },
+    // dispatch messageChanged :O
+    messageChanged: (message) => {
+      dispatch(test.actions.messageChanged(message))
     }
   }
 }
