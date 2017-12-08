@@ -5,29 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Welcome to Firebase Hosting</title>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
+    <!-- Paste this script into your head tag -->
+
+    <script>
+      GretaOptions = {
+        accessToken: "a7372761917b8d157a41146bf494c449"
       }
-    </style>
+    </script>
+
+    <script>
+    setTimeout(function(){function t(){var t=window.GretaOptions||{};t.lazyLoad=t.lazyLoad||{};for(var e=t.lazyLoad.imgAttribute||"data-src",a=t.lazyLoad.bgImgAttribute||"data-bg-src",r=["DIV","SECTION","ARTICLE","ASIDE","B","BODY","FIGURE","HTML","I","LI","MAIN","MARK","NAV","P","SPAN","STRONG","SUMMARY","TABLE","TIME","UL","H1","H2","H3","H4","LABEL"],l=t.lazyLoad.addClassOnLoad||"",A=document.querySelectorAll("IMG["+e+"]"),o=0;o<A.length;o++){var n=A[o].getAttribute(e);n&&A[o].src!==n&&(A[o].src=n,l.length>0&&(A[o].className+=" "+l))}for(var o=0;o<r.length;o++)for(var I=document.querySelectorAll(r[o]+"["+a+"]"),L=0;L<I.length;L++){var n=I[L].getAttribute(a);n&&I[L].style.backgroundImage!=="url("+n+")"&&(I[L].style.backgroundImage="url("+n+")",l.length>0&&(I[L].className+=" "+l))}}window.greta||setInterval(t,1e3)},1e3);
+    </script>
+
+    <script src="https://cdn.greta.io/greta.min.js"></script>
+
   </head>
   <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
 
     <script>
     </script>
