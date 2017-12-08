@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import test from './features/test/'
 import MessageForm from './components/MessageForm';
 import Cat from './components/Cat/Cat';
+import CatAdmin from './components/admin/CatAdmin';
 
 // helper functions
 
@@ -33,6 +34,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to Lyckan</h1>
         </header>
         <Cat />
+        <CatAdmin />
         <MessageForm messageChange={this.changeMessage}/>
         <p>{message}</p>
         <p className="App-intro">
