@@ -4,6 +4,7 @@ import './App.css';
 import { connect } from 'react-redux'
 import test from './features/test/'
 import MessageForm from './components/MessageForm';
+import Cat from './components/Cat/Cat';
 
 // helper functions
 
@@ -24,13 +25,14 @@ class App extends Component {
   render() {
     // console.log(this.props)
     console.log(changeMessage)
-    const { message, changeMessage } = this.props
+    const { message, changeMessage, title } = this.props
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Welcome to Lyckan</h1>
         </header>
+        <Cat />
         <MessageForm messageChange={this.changeMessage}/>
         <p>{message}</p>
         <p className="App-intro">
