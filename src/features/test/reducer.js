@@ -9,7 +9,7 @@ const reducer = (state = {}, action) => {
       return handleMessageChanged(
         state,
         action.payload
-      )
+    )
 
     default: return state
   }
