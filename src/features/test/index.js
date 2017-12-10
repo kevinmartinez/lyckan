@@ -4,4 +4,4 @@ import * as selectors from './selectors'
 export default {
   actions,
   selectors
- }
+}

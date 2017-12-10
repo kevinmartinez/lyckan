@@ -1,7 +1,6 @@
 import React from 'react'
-import PropTypes from 'prop-types';
 
-const MessageForm = (props) => {
+const MessageForm = props => {
   return (
     <form>
       <label>
@@ -12,4 +11,4 @@ const MessageForm = (props) => {
   )
 }
 
-export default MessageForm;
+export default MessageForm

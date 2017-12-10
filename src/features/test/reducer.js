@@ -1,17 +1,12 @@
 const reducer = (state = {}, action) => {
   switch (action.type) {
     case 'test_triggered':
-      return handleTestTriggered(
-        state,
-        action.payload,
-      )
+      return handleTestTriggered(state, action.payload)
     case 'MESSAGE_CHANGED':
-      return handleMessageChanged(
-        state,
-        action.payload
-    )
+      return handleMessageChanged(state, action.payload)
 
-    default: return state
+    default:
+      return state
   }
 }
 
@@ -27,7 +22,6 @@ const handleTestTriggered = (state, payload) => {
 const handleMessageChanged = (state, payload) => {
   const { message } = payload
   return {
-
     message: message
   }
 }
