@@ -1,4 +1,4 @@
-const testAction = (message) => {
+const testAction = message => {
   return {
     type: 'test_triggered',
     payload: {
@@ -7,7 +7,7 @@ const testAction = (message) => {
   }
 }
 
-const messageChanged = (message) => {
+const messageChanged = message => {
   return {
     type: 'MESSAGE_CHANGED',
     payload: {
