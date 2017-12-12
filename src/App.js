@@ -1,24 +1,22 @@
-// @flow
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import logo from './logo.svg'
+import './App.css'
 import { connect } from 'react-redux'
 import test from './features/test/'
-import MessageForm from './components/MessageForm';
-import Cat from './components/Cat/Cat';
-import CatAdmin from './components/admin/CatAdmin';
+import MessageForm from './components/MessageForm'
+import Cat from './components/Cat/Cat'
+import CatAdmin from './components/admin/CatAdmin'
 
 // helper functions
 
 class App extends Component {
-
   componentDidMount() {
     const { testTriggered } = this.props
 
     testTriggered()
   }
 
-  changeMessage = (event) => {
+  changeMessage = event => {
     const { messageChanged } = this.props
     const message = event.target.value
     messageChanged(message)
@@ -34,7 +32,7 @@ class App extends Component {
         </header>
         <Cat />
         <CatAdmin />
-        <MessageForm messageChange={this.changeMessage}/>
+        <MessageForm messageChange={this.changeMessage} />
         <p>{message}</p>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
@@ -42,27 +40,23 @@ class App extends Component {
       </div>
     )
   }
-
-
 }
 
-
-
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     message: test.selectors.showMessage(state)
   }
 }
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
     testTriggered: () => {
       dispatch(test.actions.testAction('KEVVIIIN'))
     },
     // dispatch messageChanged :O
-    messageChanged: (message) => {
+    messageChanged: message => {
       dispatch(test.actions.messageChanged(message))
     }
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App)

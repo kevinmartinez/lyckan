@@ -1,21 +1,18 @@
-// @flow
-const reducer = (state : Object = {}, action) => {
+const reducer = (state = {}, action) => {
   switch (action.type) {
     case 'GET_CAT_NAME':
-      return handleGetCatName(
-        state,
-        action.payload,
-      )
+      return handleGetCat(state, action.payload)
 
-      default: return state
+    default:
+      return state
   }
 }
 
-const handleGetCatName = (state, payload) => {
+const handleGetCat = (state, payload) => {
   const { name } = payload
   return {
     ...state,
-    name: name,
+    name: name
   }
 }
 

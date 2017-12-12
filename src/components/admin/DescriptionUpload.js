@@ -1,10 +1,11 @@
-// @flow
 import React from 'react'
 
-const DescriptionUpload = ({description}) => {
+const DescriptionUpload = ({ description: string }) => {
   return (
     <p>
-      <textarea name="" id="" cols="30" rows="10">{description}</textarea>
+      <textarea name="" id="" cols="30" rows="10">
+        {description}
+      </textarea>
     </p>
   )
 }

@@ -1,4 +1,3 @@
-// @flow
 const testAction = message => {
   return {
     type: 'test_triggered',
