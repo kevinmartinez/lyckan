@@ -1,3 +1,4 @@
+// @flow
 const showMessage = state => {
   return state.test.message
 }

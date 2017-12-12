@@ -1,4 +1,5 @@
-const getCatName = (name) => {
+// @flow
+const getCatName = (name: string) => {
   return {
     type: 'GET_CAT_NAME',
     payload: {

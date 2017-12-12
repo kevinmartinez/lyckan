@@ -1,3 +1,4 @@
+// @flow
 import React from 'react'
 import NameUpload from './NameUpload';
 import DescriptionUpload from './DescriptionUpload';

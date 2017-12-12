@@ -1,4 +1,5 @@
-const reducer = (state = {}, action) => {
+// @flow
+const reducer = (state : Object = {}, action) => {
   switch (action.type) {
     case 'GET_CAT_NAME':
       return handleGetCatName(

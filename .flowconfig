@@ -1,0 +1,11 @@
+[ignore]
+.*/__functions__/.*
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+
+[strict]

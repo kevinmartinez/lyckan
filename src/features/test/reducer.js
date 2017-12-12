@@ -1,3 +1,4 @@
+// @flow
 const reducer = (state = {}, action) => {
   switch (action.type) {
     case 'test_triggered':

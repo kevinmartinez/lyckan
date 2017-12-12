@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
@@ -24,8 +25,6 @@ class App extends Component {
   }
 
   render() {
-    // console.log(this.props)
-    console.log(changeMessage)
     const { message, changeMessage, title } = this.props
     return (
       <div className="App">
