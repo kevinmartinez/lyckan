@@ -1,6 +1,6 @@
 import React from 'react'
 
-const NameUpload = ({ name }) => {
+const NameUpload = ({ setName, name }) => {
   return (
     <p>
       <label htmlFor="catname">
@@ -9,7 +9,7 @@ const NameUpload = ({ name }) => {
           <abbr title="required">*</abbr>
         </strong>
       </label>
-      <input type="text" id="catname" name="catname" value={name} />
+      <input type="text" id="catname" name="catname" onChange={setName} value={name} />
     </p>
   )
 }

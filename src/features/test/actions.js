@@ -1,11 +1,11 @@
-const testAction = message => {
-  return {
-    type: 'test_triggered',
-    payload: {
-      message: message
-    }
-  }
-}
+// const testAction = message => {
+//   return {
+//     type: 'test_triggered',
+//     payload: {
+//       message: message
+//     }
+//   }
+// }
 
 const messageChanged = message => {
   return {
@@ -16,4 +16,4 @@ const messageChanged = message => {
   }
 }
 
-export { testAction, messageChanged }
+export { messageChanged }

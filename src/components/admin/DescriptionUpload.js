@@ -1,11 +1,9 @@
 import React from 'react'
 
-const DescriptionUpload = ({ description: string }) => {
+const DescriptionUpload = ({ setDescription }) => {
   return (
     <p>
-      <textarea name="" id="" cols="30" rows="10">
-        {description}
-      </textarea>
+      <textarea name="" id="" cols="30" rows="10" onChange={setDescription} />
     </p>
   )
 }

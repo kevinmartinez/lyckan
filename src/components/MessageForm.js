@@ -1,11 +1,11 @@
 import React from 'react'
 
-const MessageForm = props => {
+const MessageForm = ({ messageChange }) => {
   return (
     <form>
       <label>
         Message:
-        <input type="text" placheholder="text" onChange={props.messageChange} />
+        <input type="text" placeholder="text" onChange={messageChange} />
       </label>
     </form>
   )
