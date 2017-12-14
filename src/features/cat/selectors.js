@@ -1,3 +1,4 @@
+/* Selectors GET data */
 const getName = state => {
   return state.cat.name
 }

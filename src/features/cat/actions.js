@@ -2,6 +2,7 @@
 send data from your application to your store.
 They are the only source of information for the store
 */
+/* Actions SET */
 const nameChanged = name => {
   return {
     type: 'NAME_CHANGED',

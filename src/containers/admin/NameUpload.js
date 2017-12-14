@@ -9,7 +9,7 @@ const NameUpload = ({ setName, name }) => {
           <abbr title="required">*</abbr>
         </strong>
       </label>
-      <input type="text" id="catname" name="catname" onChange={setName} value={name} />
+      <input type="text" onChange={setName} value={name} />
     </p>
   )
 }

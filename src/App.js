@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import logo from './logo.svg'
+// import logo from './logo.svg'
 import './App.css'
 import { connect } from 'react-redux'
 import test from './features/test'
 import cat from './features/cat'
 import MessageForm from './components/MessageForm'
-import Cat from './components/Cat/Cat'
+// import Cat from './components/Cat/Cat'
 import CatAdmin from './components/admin/CatAdmin'
 
 // helper functions
@@ -36,9 +36,9 @@ class App extends Component {
   }
 
   render() {
-    const { message, changeMessage, title, name, description } = this.props
+    const { message, name, description } = this.props
     console.log('RERENDERED:', name)
-    console.log('RERENDERED:'.description)
+    console.log('RERENDERED:', description)
     return (
       <div className="App">
         {/* <header className="App-header">
@@ -46,7 +46,12 @@ class App extends Component {
           <h1 className="App-title">Welcome to Lyckan</h1>
         </header> */}
         {/* <Cat /> */}
-        <CatAdmin setName={this.setCatName} name={name} getDescription={this.setCatDescription} />
+        <CatAdmin
+          setName={this.setCatName}
+          name={this.name}
+          setDescription={this.setCatDescription}
+          decription={this.description}
+        />
         <MessageForm messageChange={this.changeMessage} />
         <p>{message}</p>
         <p className="App-intro">
@@ -61,7 +66,7 @@ const mapStateToProps = state => {
   return {
     message: test.selectors.showMessage(state),
     name: cat.selectors.getName(state),
-    description: cat.selectors.changeDescription(state)
+    description: cat.selectors.getDescription(state)
   }
 }
 const mapDispatchToProps = dispatch => {
